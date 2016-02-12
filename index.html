@@ -1,46 +1,99 @@
 <!DOCTYPE html>
 <html lang="es">
 <head>
-    <link href='https://fonts.googleapis.com/css?family=Open+Sans' rel='stylesheet' type='text/css'>
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.6/css/bootstrap.min.css" integrity="sha384-1q8mTJOASx8j1Au+a5WDVnPi2lkFfwwEAa8hDDdjZlpLegxhjVME1fgjWPGmkzs7" crossorigin="anonymous">
+
+    <link href='main.CSS' rel='stylesheet' type='text/css'>
     <meta charset="UTF-8">
     <title>Ejercico 3 de Carlos Perez</title>
    
 </head>
-<body>
+<body class="container-fluid">
+    <div>
 
-<!-- Asi se inroducem amotaciones -->
+    <!-- Asi se introducen amotaciones -->
 
-    <p>Menu</p>
-    <ul>
-        <li><a href = "#Habilidades_Y_Conocimientos"> Habilidades y conocimientos</a> </li>
-        <li><a href = "#Perfiles_Sociales"> Perfiles sociales</a> </li>
-    </ul>
-    <hr>
-    <br>
-    
-    <img src = "Foto-Carlos-Perez.jpg" alt = "Foto Carlos Perez">
-    <h1>Carlos Pérez Jimeno</h1>
-    <p>
-    Situación actual: Estudiante del Master GIS de Esri España
-    </p>
-    <hr>
+        <p></p>
+        <ul class="list-inline">
+            <li><a href="#experiencia_profesional">Experiencia Profesional</a></li>
+            <li><a href = "#Habilidades_Y_Conocimientos"> Habilidades y conocimientos</a> </li>
+            <li><a href="#educacion">Educación</a></li>
+            <li><a href = "#Perfiles_Sociales"> Perfiles sociales</a> </li>
+        </ul>
+        <hr>
+        <br>
+        
+        <img class="hidden-xs" src = "Foto-Carlos-Perez.jpg" alt = "Foto Carlos Perez">
+        <h1>Carlos Pérez Jimeno</h1>
+        <p>
+                Pequeño párrafo diciendo que has estudiado, por qué y cuales son tus aficciones
+        </p>
+        <hr>
 
-    <h2><a id="Habilidades_Y_Conocimientos"> Habilidades y conocimientos</a></h2>
+        <h2><a id="experiencia_profesional">Experiencia Profesional</a></h2>
+        <table class = "table" >
+            <tr>
+                <td><strong>Empresa</strong></td>
+                <td><strong>Cargo</strong></td>
+                <td><strong>Localización</strong></td>
+                <td><strong>Fecha</strong></td>
+            </tr>
+            <tr>
+                <td>Atos</td>
+                <td>IT Team-Results Manager</td>
+                <td>Pan Am Games Toronto</td>
+                <td>2015</td>
+            </tr>
+            <tr>
+                <td>Atos</td>
+                <td>IT Team-Results Manager</td>
+                <td>Sea Games Singapore</td>
+                <td>2015</td>
+            </tr>
+        </table>
 
-    <ul>
-    
-        <li>Título de Ingeniero Técnico en Topografía</li>
-        <li>Master GIS de Esri</li>
-    </ul>
-    <h2><a id = "Perfiles_Sociales"> Perfiles Sociales</a> </h2>
+ 
 
-    <ul>
+        <h2><a id="Habilidades_Y_Conocimientos">Habilidades y conocimientos</a></h2>
+        <ul>
+            <li>Título de Ingeniero Técnico en Topografía</li>
+            <li>Master GIS de Esri</li>
+        </ul>
 
-        <li><a href = "https://www.facebook.com/carlos.perezjimeno"> Facebook </a></li>
-        <li><a href = "https://www.linkedin.com/in/carlos-perez-jimeno-087b3390?trk=hp-identity-name"> Linkedin </a></li>
+        <h2><a id="educacion">Educación</a></h2>
 
-    </ul>
+        <table class="table">
+            <tr>
+                <td><strong>Educación</strong></td>
+                <td><strong>Entidad</strong></td>
+                <td><strong>Promoción</strong></td>
+            </tr>
+
+            <tr>
+                <td>Master GIS</td>
+                <td>Esri España</td>
+                <td>2016</td>
+            </tr>
+
+            <tr>
+                <td>Ingeniero Técnico en Topografía</td>
+                <td>Universidad Politécnica de Madrid</td>
+                <td>2014</td>
+            </tr>
 
 
+        </table>
+
+
+
+        <h2><a id = "Perfiles_Sociales">Perfiles Sociales</a> </h2>
+
+        <ul class="list-inline">
+            <li><a href = "https://www.facebook.com/carlos.perezjimeno"> Facebook </a></li>
+            <li><a href = "https://www.linkedin.com/in/carlos-perez-jimeno-087b3390?trk=hp-identity-name"> Linkedin </a></li>
+            <li><a href = "https://www.instagram.com/jimeno0/"> Instagram </a> </li>
+        </ul>
+
+    </div>
 </body>
 </html>
