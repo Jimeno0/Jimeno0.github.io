@@ -1,7 +1,7 @@
 <!DOCTYPE html>
 <html lang="es">
 <head>
-  <title>Curriculum Vitae</title>
+  <title>Carlos Pérez Jimeno</title>
 	<meta name="viewport" content="width=device-width, initial-scale=1">
 	<meta charset="UTF-8">
 
@@ -12,6 +12,11 @@
   <style type="text/css">
     i{
       align: center;
+    }
+    .carousel-control {
+    position: absolute;
+    top: 50%;
+    bottom: 50%;
     }
   </style>
 
@@ -30,7 +35,7 @@
                 <span class="icon-bar"></span>
                 <span class="icon-bar"></span>
               </button>
-              <a class="navbar-brand" href="javascript:void(0)">Carlos Pérez Jimeno | </a>
+              <span class="navbar-brand">Carlos Pérez Jimeno | </span>
             </div>
             <div class="navbar-collapse collapse navbar-responsive-collapse">
               <ul class="nav navbar-nav">
@@ -52,9 +57,10 @@
     <div class="row">
       <div class="col-md-1"></div>
       <div class="col-md-10">
+        <h1 style="display:none;">Carlos Pérez Jimeno - Curriculum Vitae</h1>
         <!-- about -->
-        <div clas="row" id="about">
-          
+        <div class="row" id="about">
+          <h2>About</h2>
           <div class="col-md-6">
             <p>
               GIS Developer and maps lover. Focused in web development. Currently working in the Technology and Innovation Departament in Esri Spain.
@@ -69,24 +75,48 @@
           </div>
         </div>
         <!-- Portfolio -->
-        <div clas="row" id="portfolio">
+        <div class="row" id="portfolio">
           <h2>Portfolio</h2>
             <div id="carouselPortfolio" class="carousel slide" data-ride="carousel">
               <ol class="carousel-indicators">
                 <li data-target="#carouselPortfolio" data-slide-to="0" class="active"></li>
                 <li data-target="#carouselPortfolio" data-slide-to="1"></li>
                 <li data-target="#carouselPortfolio" data-slide-to="2"></li>
+                <li data-target="#carouselPortfolio" data-slide-to="3"></li>
               </ol>
+
 
               <div class="carousel-inner" role="listbox">
                 <div class="item active">
                   <iframe width="100%" height="600" scrolling="no" marginheight="0" marginwidth="0" src="https://jimeno0.github.io/my-calcite/crime-dc-white-blue.html"></iframe>
+                  <div class="carousel-caption">
+                    <h3>Crime in Washington</h3>
+                    <p>Aplicación para el análisis de crimenes sobre la extensión actual del mapa</p>
+                    <a href="https://jimeno0.github.io/my-calcite/crime-dc-white-blue.html">Abrir app</a>
+                  </div>                  
                 </div>
                 <div class="item">
                 <iframe width="100%" height="600" scrolling="no" marginheight="0" marginwidth="0" src="http://www.geodevelopers.org/jobs/"></iframe>
+                  <div class="carousel-caption">
+                    <h3>www.geodevelopers.org/jobs/</h3>
+                    <p>Portal de empleo para la comunidad de Geodevelopers</p>
+                    <a href="http://www.geodevelopers.org/jobs/">Abrir app</a>
+                  </div>
                 </div>
                 <div class="item">
                   <iframe width="100%" height="600" src="https://www.youtube.com/embed/Hzyg60Gfl-M" frameborder="0" allowfullscreen></iframe>
+                  <div class="carousel-caption">
+                    <h3>GeoShare</h3>
+                    <p>Proyecto final de Máster consistente en una aplicación social para compartir rutas en la casa de campo</p>
+                  </div>
+                </div>
+                <div class="item">
+                  <iframe width="100%" height="600" src="http://jimeno0.github.io/TableQueryWidget/index.html" frameborder="0" allowfullscreen></iframe>
+                  <div class="carousel-caption">
+                    <h3>Widget de configurable de consultas</h3>
+                    <p>Herramienta totalmente configurable para poder mostrar los campos que queramos en la tabla, establecer consultas y mostrarnos el elemento deseado en el mapa</p>
+                    <a href="https://github.com/Jimeno0/TableQueryWidget">Más info</a>
+                  </div>
                 </div>
               </div>
 
@@ -107,7 +137,7 @@
         </div>
 
         <!-- Experiencia profesional -->
-        <div clas="row" id="exProf">
+        <div class="row" id="exProf">
           <h2>Experiencia profesional</h2>
           <iframe
           width="100%" height="600"
@@ -156,7 +186,7 @@
         </div>
 
         <!-- Habilidades y conocimientos -->
-        <div clas="row" id="habilidades">
+        <div class="row" id="habilidades">
           <h2>Habilidades y conocimientos</h2>
           <ul class="nav nav-tabs" style="margin-bottom: 15px;">
             <li class="active"><a href="#development" data-toggle="tab">Desarrollo</a></li>
@@ -435,7 +465,7 @@
         </div>
 
         <!-- Formación -->
-        <div clas="row" id="formacion">
+        <div class="row" id="formacion">
           <h2>Formación</h2>
             <table class="table table-striped table-hover">
             <thead>
@@ -463,7 +493,7 @@
         </div>
 
         <!-- Perfiles & contacto -->
-        <div clas="row" id="perfiles">
+        <div class="row" id="perfiles">
           <div class="col-md-3 col-xs-3">
             <a href="https://github.com/jimeno0"><i class="fa fa-github fa-3x" title="GitHub"></i></a>            
           </div>
