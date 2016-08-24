@@ -1,0 +1,31 @@
+[
+	{
+		"name": "Crime in Washington",
+		"src": "https://jimeno0.github.io/my-calcite/crime-dc-white-blue.html",
+		"resume": "Aplicación para el análisis de crimenes sobre la extensión actual del mapa",
+		"href": "https://jimeno0.github.io/my-calcite/crime-dc-white-blue.html",
+		"hrefText": "Abrir app"
+	},
+	{
+		"name": "www.geodevelopers.org/jobs",
+		"src": "http://www.geodevelopers.org/jobs/",
+		"resume": "Portal de empleo para la comunidad de Geodevelopers",
+		"href": "http://www.geodevelopers.org/jobs/",
+		"hrefText": "Abrir app"
+	},
+	{
+		"name": "GeoShare",
+		"src": "https://www.youtube.com/embed/Hzyg60Gfl-M",
+		"resume": "Proyecto final de Máster consistente en una aplicación social para compartir rutas en la casa de campo",
+		"href": "",
+		"hrefText": ""
+	},
+	{
+		"name": "Widget configurable de consultas",
+		"src": "http://jimeno0.github.io/TableQueryWidget/index.html",
+		"resume": "Herramienta totalmente configurable para poder mostrar los campos que queramos en la tabla, establecer consultas y mostrarnos el elemento deseado en el mapa",
+		"href": "https://github.com/Jimeno0/TableQueryWidget",
+		"hrefText": "Más info"
+	}
+
+]
