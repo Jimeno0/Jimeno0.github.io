@@ -5,7 +5,24 @@
   <link rel="stylesheet" type="text/css" href="bower_components/angular-material/angular-material.css">
 
 </head>
-<body ng-app="MyApp" ng-controller="MyWebController">
+<body ng-app="MyApp" ng-controller="MyWebController as MyWC">
+  <md-toolbar md-scroll-shrink md-shrink-speed-factor="0.5" class="md-whiteframe-6dp" layout="row" layout-align="space-between">
+
+    <md-button md-no-ink="true" ><h2>Carlos Pérez Jimeno | </h2></md-button>
+
+    <md-button hide-sm class="md-primary md-hue-1" ng-repeat="section in MyWC.sections" hfer="{{section.href}}" >{{section.name}}</md-button>
+  </md-toolbar>
+
+  <md-content>
+    <div id="about">
+     <h2>Hello!</h2>
+    </div>
+    <md-divider ></md-divider>
+    <div id="portfolio">
+      <h2>Portfolio</h2>
+      
+    </div>
+  </md-content>
 
 
 <script type="text/javascript" src="bower_components/angular/angular.js" ></script>
@@ -16,6 +33,40 @@
 <script type="text/javascript">
   angular.module('MyApp',['ngMaterial']).controller('MyWebController',function (){
     console.log('Hello world');
+
+
+    this.sections = [
+    {
+      name:'About',
+      href:'#about'
+    },
+    {
+      name:'Portfolio',
+      href:'#portfolio'
+
+    },
+    {
+      name:'Professional experience',
+      href:'#profExp'
+
+    },
+    {
+      name:'Skills',
+      href:'#About'
+
+    },
+    {
+      name:'Education',
+      href:'#education'
+
+    },
+    {
+      name:'Contact',
+      href:'#contact'
+
+    }];
+
+
   });
 </script>
 </body>
