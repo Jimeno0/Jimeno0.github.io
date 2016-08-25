@@ -14,6 +14,10 @@ angular
     });
     $http.get('data/skills.json').then(function(response){
           self.cats = response.data;
+    });
+
+    $http.get('data/portfolio.json').then(function(response){
+          self.portfolio = response.data;
           console.log(response.data);
     });
 

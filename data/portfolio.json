@@ -1,31 +1,35 @@
 [
 	{
-		"name": "Crime in Washington",
-		"src": "https://jimeno0.github.io/my-calcite/crime-dc-white-blue.html",
-		"resume": "Aplicación para el análisis de crimenes sobre la extensión actual del mapa",
+		"title": "Crime in Washington D.C.",
+		"subtitle":"Analysing data with graphics",
+		"image":"images/crime-dc.png",
+		"resume": "App to show how to understand massive data using graphics in the current map extent",
 		"href": "https://jimeno0.github.io/my-calcite/crime-dc-white-blue.html",
-		"hrefText": "Abrir app"
+		"hrefText": "Open app"
 	},
 	{
-		"name": "www.geodevelopers.org/jobs",
-		"src": "http://www.geodevelopers.org/jobs/",
-		"resume": "Portal de empleo para la comunidad de Geodevelopers",
+		"title": "Employment website",
+		"subtitle":"www.geodevelopers.org/jobs",
+		"image":"images/geodev-jobs.png",
+		"resume": "Employment website for the Geodevelopers community",
 		"href": "http://www.geodevelopers.org/jobs/",
-		"hrefText": "Abrir app"
+		"hrefText": "Open app"
 	},
 	{
-		"name": "GeoShare",
-		"src": "https://www.youtube.com/embed/Hzyg60Gfl-M",
-		"resume": "Proyecto final de Máster consistente en una aplicación social para compartir rutas en la casa de campo",
-		"href": "",
-		"hrefText": ""
+		"title": "GeoShare",
+		"subtitle":"Master's project",
+		"image":"images/pfm.png",
+		"resume": "Sports App to share to record and share routes, developed as my Master's project",
+		"href": "https://www.youtube.com/embed/Hzyg60Gfl-M",
+		"hrefText": "Video"
 	},
 	{
-		"name": "Widget configurable de consultas",
-		"src": "http://jimeno0.github.io/TableQueryWidget/index.html",
-		"resume": "Herramienta totalmente configurable para poder mostrar los campos que queramos en la tabla, establecer consultas y mostrarnos el elemento deseado en el mapa",
+		"title": "Configurable query widget",
+		"subtitle":"Developed for ArcGIS Web AppBuilder",
+		"image":"images/widget-cities.png",
+		"resume": "Absolutely configurable WAB widget that allow us to customize wich fields we want to display, set querys and show the selected item on the map ",
 		"href": "https://github.com/Jimeno0/TableQueryWidget",
-		"hrefText": "Más info"
+		"hrefText": "More info"
 	}
 
 ]
