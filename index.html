@@ -6,12 +6,16 @@
 
 </head>
 <body ng-app="MyApp" ng-controller="MyWebController as MyWC" ng-cloak>
-  <md-toolbar md-scroll-shrink md-shrink-speed-factor="0.5" class="md-whiteframe-6dp" layout="row" layout-align="space-between">
-    <p>Carlos Pérez Jimeno |</p>
-    <md-button hide show-gt-sm ng-repeat="section in MyWC.sections" href="{{section.href}}" >{{section.name}}</md-button>
-    <md-button hide-gt-sm ng-click="MyWC.toggleSidenav()">
-      <md-icon md-svg-icon="menu" aria-label="Show sections menu" ></md-icon>
-    </md-button>
+  <md-toolbar class="md-whiteframe-6dp" layout="row" >
+    
+    <div class="md-toolbar-tools" >
+      <p>Carlos Pérez Jimeno |</p>
+      <md-button hide show-gt-sm ng-repeat="section in MyWC.sections" href="{{section.href}}" >{{section.name}}</md-button>
+      <md-button hide-gt-sm ng-click="MyWC.toggleSidenav()">
+        <md-icon md-svg-icon="menu" aria-label="Show sections menu" ></md-icon>
+      </md-button>  
+    </div>
+    
   </md-toolbar> 
   
   <md-content>
@@ -38,14 +42,21 @@
     <div class="md-whiteframe-6dp" id="skills">
       <h2>Skills</h2>
 
-      <!-- Triying to do anidate ng-repeats -->
       <md-tabs md-dynamic-height md-border-bottom>
         <md-tab ng-repeat="cat in MyWC.cats" label="{{cat.category}}">
           <md-content class="md-padding">
-          <div ng-repeat="element in cat.skills">
-            <p>{{element.name}}</p>
-            <md-progress-linear md-mode="determinate" value="{{element.knowledge}}"></md-progress-linear>
-          </div>
+
+            <div layout="row" ng-repeat="item in cat.skills" ng-switch="" on="$index % 2">
+              <div flex="50" ng-switch-when="0" style="margin-right:4px;">
+                <p>{{cat.skills[$index].name}}</p>
+                <md-progress-linear md-mode="determinate" value="{{cat.skills[$index].knowledge}}"></md-progress-linear>
+              </div>
+              <div  flex="50" ng-switch-when="0" ng-show="cat.skills[$index+1]" style="margin-left:4px;">
+                <p>{{cat.skills[$index+1].name}}</p>
+                <md-progress-linear md-mode="determinate" value="{{cat.skills[$index+1].knowledge}}"></md-progress-linear>
+              </div>
+            </div>
+
           </md-content>
         </md-tab>
       </md-tabs>
