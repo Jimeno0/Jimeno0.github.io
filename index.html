@@ -5,50 +5,57 @@
   <link rel="stylesheet" type="text/css" href="bower_components/angular-material/angular-material.css">
 
 </head>
-<body ng-app="MyApp" ng-controller="MyWebController as MyWC">
+<body ng-app="MyApp" ng-controller="MyWebController as MyWC" ng-cloak>
   <md-toolbar md-scroll-shrink md-shrink-speed-factor="0.5" class="md-whiteframe-6dp" layout="row" layout-align="space-between">
-
     <p>Carlos Pérez Jimeno |</p>
-
     <md-button hide show-gt-sm ng-repeat="section in MyWC.sections" href="{{section.href}}" >{{section.name}}</md-button>
-
     <md-button hide-gt-sm ng-click="MyWC.toggleSidenav()">
       <md-icon md-svg-icon="menu" aria-label="Show sections menu" ></md-icon>
     </md-button>
-  </md-toolbar>
-
-  
+  </md-toolbar> 
   
   <md-content>
-
-  <md-sidenav layout="column" md-component-id="right" class="md-sidenav-right md-whiteframe-4dp">
-
-        <md-button style="text-align:right;" ng-repeat="section in MyWC.sections" ng-href="{{section.href}}" ng-click="MyWC.toggleSidenav()" >{{section.name}}</md-button>        
-
-  </md-sidenav>
+    <md-sidenav layout="column" md-component-id="right" class="md-sidenav-right md-whiteframe-4dp">
+      <md-button style="text-align:right;" ng-repeat="section in MyWC.sections" href="{{section.href}}" ng-click="MyWC.toggleSidenav()" >{{section.name}}</md-button>
+    </md-sidenav>
 
     <div id="about" style="background-image: url(svg/caraperfil.svg);margin:-20px;background-repeat:'no';">
-
       <p style="text-align:right; padding:15%;color:white;">
         <strong>
           GIS Developer and maps lover. Focused in web development. In my freetime I love to learn new technologies and create WebApps proyects on my <a href="https://github.com/jimeno0">github</a> account. I also like to do any boardsport every now and then.
         </strong>
       </p>
-
     </div>
     
     <div class="md-whiteframe-6dp" id="portfolio">
       <h2>Portfolio</h2>
     </div>
-    <div id="profExp">
-      <h2>Professional experience</h2>   
+
+    <div id="profExp" >
+      <h2>Professional experience</h2> 
     </div>
+
     <div class="md-whiteframe-6dp" id="skills">
-      <h2>Skills</h2>   
+      <h2>Skills</h2>
+
+      <!-- Triying to do anidate ng-repeats -->
+      <md-tabs md-dynamic-height md-border-bottom>
+        <md-tab ng-repeat="cat in MyWC.cats" label="{{cat.category}}">
+          <md-content class="md-padding">
+          <div ng-repeat="element in cat.skills">
+            <p>{{element.name}}</p>
+            <md-progress-linear md-mode="determinate" value="{{element.knowledge}}"></md-progress-linear>
+          </div>
+          </md-content>
+        </md-tab>
+      </md-tabs>
+
     </div>
+
     <div id="education">
       <h2>Education</h2>   
     </div>
+
     <div class="md-whiteframe-6dp" id="contact">
       <h2>Contact</h2>   
     </div>
@@ -64,5 +71,6 @@
 
 <script type="text/javascript" src="app/MyApp.js" ></script>
 <script type="text/javascript" src="app/MyWebController.js" ></script>
+<script type="text/javascript" src="app/MyWebConfig.js" ></script>
 </body>
 </html>

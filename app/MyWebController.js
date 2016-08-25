@@ -5,13 +5,17 @@ angular
   function myWebControler ($http,$mdSidenav){
     var self=this;
 
-    this.toggleSidenav = toggleSidenav;
+    self.toggleSidenav = toggleSidenav;
 
-    console.log('Hello world');
+    
     $http.get('data/section.json').then(function(response){
           self.sections = response.data;
-    });
 
+    });
+    $http.get('data/skills.json').then(function(response){
+          self.cats = response.data;
+          console.log(response.data);
+    });
 
     function toggleSidenav(){
       $mdSidenav('right').toggle();
