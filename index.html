@@ -4,6 +4,13 @@
   <title>jimeno0 website</title>
   <link rel="stylesheet" type="text/css" href="bower_components/angular-material/angular-material.css">
 
+  <style type="text/css">
+    a{
+      color: #448AFF;
+      text-decoration: none;
+    }
+  </style>
+
 </head>
 <body ng-app="MyApp" ng-controller="MyWebController as MyWC" ng-cloak>
   <md-toolbar class="md-whiteframe-6dp" layout="row" >
@@ -21,15 +28,19 @@
       <md-button style="text-align:right;" ng-repeat="section in MyWC.sections" href="{{section.href}}" ng-click="MyWC.toggleSidenav()" >{{section.name}}</md-button>
     </md-sidenav>
 
-    <div id="about" style="background-image: url(svg/caraperfil.svg);margin:-20px;background-repeat:'no';">
-      <p style="text-align:right; padding:15%;color:white;">
-        <strong>
-          GIS Developer and maps lover. Focused in web development. In my freetime I love to learn new technologies and create WebApps proyects on my <a href="https://github.com/jimeno0">github</a> account. I also like to do any boardsport every now and then.
-        </strong>
-      </p>
+    <!-- <div id="about" style="background-image: url(svg/caraperfil.svg);margin:-20px;background-repeat:'no';"> -->
+    <div id="about" style="position:relative">
+      <img src="svg/caraperfil.svg" style="width:100%;">
+      <div flex="20">
+        <p style="text-align:right; padding:10%;color:white;position:absolute;right:15px;top:15px;width:40%">
+          <strong>
+            GIS Developer and maps lover. Focused in web development. In my freetime I love to learn new technologies and create WebApps proyects on my <a href="https://github.com/jimeno0">github</a> account. I also like to do any boardsport every now and then.
+          </strong>
+        </p>
+      </div>
     </div>
     
-    <div class="md-whiteframe-6dp" id="portfolio"  >
+    <div class="md-whiteframe-6dp" id="portfolio" class="md-padding">
       <h2>Portfolio</h2>
 
 
@@ -54,13 +65,13 @@
                 </p>
               </md-card-content>
               <md-card-actions layout="row" layout-align="start center">
-                <md-button>{{app.hrefText}}</md-button>
-                <md-button>Action 2</md-button>
-                <md-card-icon-actions>
-                  <md-button class="md-icon-button" aria-label="icon">
-                    <md-icon md-svg-icon="svg/menu.svg"></md-icon>
+                <md-button class="md-accent" href="{{app.href}}">{{app.hrefText}}</md-button>
+                <md-button class="md-icon-button md-accent" href="{{app.github}}" aria-label="icon">
+                    <md-icon md-svg-icon="{{MyWC.icons[0].url}}"></md-icon>
+                    <md-tooltip md-visible="true" md-direction="right" md-autohide="true">
+                      View source code
+                    </md-tooltip>
                   </md-button>
-                </md-card-icon-actions>
               </md-card-actions>
             </md-card>
 
@@ -72,8 +83,20 @@
 
     </div>
 
-    <div id="profExp" >
-      <h2>Professional experience</h2> 
+    <div id="profExp" style="position:relative">
+
+      <h2 style="display:none">Professional experience</h2> 
+      <div id="imgProfExp">
+        <img ng-src="images/profexp.png" class="md-card-image" alt="professional experience" style="width:100%" ng-click="MyWC.toggleMap()" id="imgProfExp">  
+      </div>
+      
+      <div id="iframeProfExp" style="display:none">
+        <md-button class="md-raised md-warn" ng-click="MyWC.toggleMap()" style="position:absolute;right:15px;top:15px;">Close map navigation</md-button>
+        <iframe style="width:100%;height:600px;margin:0;" src="https://www.maps.arcgis.com/apps/MapTour/index.html?appid=3fbbae1e85d34431bee017870e2aa57a&embed" id="iframeProfExp"></iframe>  
+      </div>
+
+      
+      
     </div>
 
     <div class="md-whiteframe-6dp" id="skills">
@@ -87,10 +110,12 @@
               <div flex="50" ng-switch-when="0" style="margin-right:4px;">
                 <p>{{cat.skills[$index].name}}</p>
                 <md-progress-linear md-mode="determinate" value="{{cat.skills[$index].knowledge}}"></md-progress-linear>
+                <md-tooltip>{{cat.skills[$index].knowledge}}%</md-tooltip>
               </div>
               <div  flex="50" ng-switch-when="0" ng-show="cat.skills[$index+1]" style="margin-left:4px;">
                 <p>{{cat.skills[$index+1].name}}</p>
                 <md-progress-linear md-mode="determinate" value="{{cat.skills[$index+1].knowledge}}"></md-progress-linear>
+                <md-tooltip>{{cat.skills[$index+1].knowledge}}%</md-tooltip>
               </div>
             </div>
 
@@ -100,12 +125,42 @@
 
     </div>
 
-    <div id="education">
-      <h2>Education</h2>   
+    <div id="education"  class="md-padding">
+      <h2>Education</h2> 
+      <div layout="row" class="md-padding">
+        <div flex="50" layout="column" layout-align="space-around">
+          <h3>Survey engineer</h3>
+          <h4>Universidad Politecnica de Madrid</h4>
+          <strong>Degree's Project:</strong>
+          <md-list>
+            <md-list-item >
+              <span>9/10</span>
+            </md-list-item>
+             <md-list-item>
+              <span>Utilización de recursos Open Data en procesos de documentación cartográfica de bajo coste sobre territorios no estructurados de interés arqueológico mediante imágenes Landsat 8: Área de Mleiha-Khor Fakkan (E.A.U). <a href="http://ocs.ebd.csic.es/index.php/AET/2015/paper/view/82/281">See article</a></span>
+            </md-list-item>
+          </md-list>
+        </div>
+        <div flex="50" layout="column">
+          <h3>Master GIS</h3>
+          <h4>Esri</h4>
+          <strong>Master's Project:</strong>
+          <md-list>
+            <md-list-item >
+              <span>A+</span>
+            </md-list-item>
+             <md-list-item>
+              <span><a href="https://www.youtube.com/embed/Hzyg60Gfl-M">GeoShare</a>, Web app to share your routes</span>
+            </md-list-item>
+          </md-list>
+        </div>
+      </div>
     </div>
 
-    <div class="md-whiteframe-6dp" id="contact">
-      <h2>Contact</h2>   
+    <div class="md-whiteframe-6dp md-padding" id="contact" layout-align="space-between" layout="row">
+    <md-button ng-repeat="icon in MyWC.icons" class="md-fab" href="{{icon.href}}" aria-label="{{icon.name}}">
+      <md-icon md-svg-icon="{{icon.url}}" ></md-icon>
+    </md-button>
     </div>
   </md-content>
 

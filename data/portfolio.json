@@ -5,6 +5,7 @@
 		"image":"images/crime-dc.png",
 		"resume": "App to show how to understand massive data using graphics in the current map extent",
 		"href": "https://jimeno0.github.io/my-calcite/crime-dc-white-blue.html",
+		"github":"https://github.com/Jimeno0/my-calcite/tree/gh-pages",
 		"hrefText": "Open app"
 	},
 	{
@@ -13,6 +14,7 @@
 		"image":"images/geodev-jobs.png",
 		"resume": "Employment website for the Geodevelopers community",
 		"href": "http://www.geodevelopers.org/jobs/",
+		"github":"https://github.com/Geo-Developers/geo-developers-site/tree/jobs_site",
 		"hrefText": "Open app"
 	},
 	{
@@ -21,6 +23,7 @@
 		"image":"images/pfm.png",
 		"resume": "Sports App to share to record and share routes, developed as my Master's project",
 		"href": "https://www.youtube.com/embed/Hzyg60Gfl-M",
+		"github":"https://github.com/Jimeno0/PFM-GeoShare/tree/master/GeoShare",
 		"hrefText": "Video"
 	},
 	{
@@ -29,6 +32,7 @@
 		"image":"images/widget-cities.png",
 		"resume": "Absolutely configurable WAB widget that allow us to customize wich fields we want to display, set querys and show the selected item on the map ",
 		"href": "https://github.com/Jimeno0/TableQueryWidget",
+		"github":"https://github.com/Jimeno0/TableQueryWidget",
 		"hrefText": "More info"
 	}
 
