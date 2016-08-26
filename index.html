@@ -9,6 +9,10 @@
       color: #448AFF;
       text-decoration: none;
     }
+    h2{
+      color: rgb(0,150,136);
+      text-align: center;
+    }
   </style>
 
 </head>
@@ -30,9 +34,9 @@
 
     <!-- <div id="about" style="background-image: url(svg/caraperfil.svg);margin:-20px;background-repeat:'no';"> -->
     <div id="about" style="position:relative">
-      <img src="svg/caraperfil.svg" style="width:100%;">
-      <div flex="20">
-        <p style="text-align:right; padding:10%;color:white;position:absolute;right:15px;top:15px;width:40%">
+      <img src="svg/perfil-apaisado.svg" style="width:100%;">
+      <div >
+        <p flex="100" flex-gt-sm="45" style="text-align:right; padding:10%;color:white;position:absolute;right:15px;top:15px;">
           <strong>
             GIS Developer and maps lover. Focused in web development. In my freetime I love to learn new technologies and create WebApps proyects on my <a href="https://github.com/jimeno0">github</a> account. I also like to do any boardsport every now and then.
           </strong>
@@ -40,8 +44,8 @@
       </div>
     </div>
     
-    <div class="md-whiteframe-6dp" id="portfolio" class="md-padding">
-      <h2>Portfolio</h2>
+    <div class="md-whiteframe-6dp" id="portfolio" class="md-padding" >
+      <h2 class="md-padding">Portfolio</h2>
 
 
 <!--         <md-content class="md-padding" layout-xs="column" layout="row">
@@ -51,7 +55,7 @@
 
           <div layout="row" class="md-padding" layout-wrap layout-align="center">
 
-            <md-card flex="40" ng-repeat="app in MyWC.portfolio">
+            <md-card flex="100" flex-gt-xs="45" ng-repeat="app in MyWC.portfolio">
               <md-card-header>
                 <md-card-header-text>
                   <span class="md-title">{{app.title}}</span>
@@ -99,14 +103,16 @@
       
     </div>
 
-    <div class="md-whiteframe-6dp" id="skills">
-      <h2>Skills</h2>
+    <div class="md-whiteframe-6dp" id="skills">  
+      <h2 class="md-padding">Skills</h2>
+      
+      
 
       <md-tabs md-dynamic-height md-border-bottom>
         <md-tab ng-repeat="cat in MyWC.cats" label="{{cat.category}}">
           <md-content class="md-padding">
 
-            <div layout="row" ng-repeat="item in cat.skills" ng-switch="" on="$index % 2">
+<!--             <div layout="row" ng-repeat="item in cat.skills" ng-switch="" on="$index % 2">
               <div flex="50" ng-switch-when="0" style="margin-right:4px;">
                 <p>{{cat.skills[$index].name}}</p>
                 <md-progress-linear md-mode="determinate" value="{{cat.skills[$index].knowledge}}"></md-progress-linear>
@@ -117,7 +123,33 @@
                 <md-progress-linear md-mode="determinate" value="{{cat.skills[$index+1].knowledge}}"></md-progress-linear>
                 <md-tooltip>{{cat.skills[$index+1].knowledge}}%</md-tooltip>
               </div>
+            </div> -->
+
+
+            <div layout="row" layout-wrap>
+              <div class="md-padding" ng-repeat="item in cat.skills" flex="100" flex-gt-xs="50">
+                <p>{{item.name}}</p>
+                <md-progress-linear md-mode="determinate" value="{{item.knowledge}}"></md-progress-linear>
+                <md-tooltip>{{item.knowledge}}%</md-tooltip>
+              </div>
             </div>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 
           </md-content>
         </md-tab>
@@ -127,8 +159,8 @@
 
     <div id="education"  class="md-padding">
       <h2>Education</h2> 
-      <div layout="row" class="md-padding">
-        <div flex="50" layout="column" layout-align="space-around">
+      <div layout="row" layout-wrap class="md-padding">
+        <div flex="100" flex-gt-xs="50" layout="column" layout-align="space-around" style="text-align:right;">
           <h3>Survey engineer</h3>
           <h4>Universidad Politecnica de Madrid</h4>
           <strong>Degree's Project:</strong>
@@ -141,7 +173,7 @@
             </md-list-item>
           </md-list>
         </div>
-        <div flex="50" layout="column">
+        <div flex="100" flex-gt-xs="50" layout="column">
           <h3>Master GIS</h3>
           <h4>Esri</h4>
           <strong>Master's Project:</strong>

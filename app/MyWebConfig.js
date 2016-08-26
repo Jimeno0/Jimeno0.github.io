@@ -5,7 +5,7 @@ angular
     $mdThemingProvider
       .theme('default')
       .primaryPalette('teal')
-    .accentPalette('light-blue')
-    .warnPalette('orange')
-    .backgroundPalette('grey');
+      .accentPalette('light-blue')
+      .warnPalette('orange')
+      .backgroundPalette('grey');
   });
