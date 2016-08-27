@@ -3,6 +3,7 @@
 <head>
   <title>jimeno0 website</title>
   <meta name="viewport" content="width=device-width, user-scalable=no, initial-scale=1.0, maximum-scale=1.0, minimal-ui" />
+
   <link rel="stylesheet" type="text/css" href="bower_components/angular-material/angular-material.css">
 
   <style type="text/css">
@@ -14,6 +15,12 @@
       color: rgb(0,150,136);
       text-align: center;
     }
+
+    h4 {
+      margin: 0;
+      margin-bottom: 5px;
+      opacity: 0.5;
+    }
   </style>
 
 </head>
@@ -21,7 +28,7 @@
   <md-toolbar class="md-whiteframe-6dp" layout="row" >
     
     <div class="md-toolbar-tools" >
-      <p>Carlos Pérez Jimeno |</p>
+      <h1>Carlos Pérez Jimeno</h1>
       <md-button hide show-gt-sm ng-repeat="section in MyWC.sections" href="{{section.href}}" >{{section.name}}</md-button>
       <md-button hide-gt-sm ng-click="MyWC.toggleSidenav()">
         <md-icon md-svg-icon="menu" aria-label="Show sections menu" ></md-icon>
@@ -160,32 +167,19 @@
 
     <div id="education"  class="md-padding">
       <h2>Education</h2> 
-      <div layout="row" layout-wrap class="md-padding">
-        <div flex="100" flex-gt-xs="50" layout="column" layout-align="space-around" style="text-align:right;">
+      <div layout="row" layout-wrap layout-align="space-between" >
+        <div flex="100" flex-gt-xs="45" layout="column" class="md-padding" style="text-align:right;">
           <h3>Survey engineer</h3>
-          <h4>Universidad Politecnica de Madrid</h4>
-          <strong>Degree's Project:</strong>
-          <md-list>
-            <md-list-item >
-              <span>9/10</span>
-            </md-list-item>
-             <md-list-item>
-              <span>Utilización de recursos Open Data en procesos de documentación cartográfica de bajo coste sobre territorios no estructurados de interés arqueológico mediante imágenes Landsat 8: Área de Mleiha-Khor Fakkan (E.A.U). <a href="http://ocs.ebd.csic.es/index.php/AET/2015/paper/view/82/281">See article</a></span>
-            </md-list-item>
-          </md-list>
+          <h4>Universidad Politecnica de Madrid | 2014</h4>
+          <strong>Degree's Project (9/10)</strong>
+            <p>Utilización de recursos Open Data en procesos de documentación cartográfica de bajo coste sobre territorios no estructurados de interés arqueológico mediante imágenes Landsat 8: Área de Mleiha-Khor Fakkan (E.A.U). <a href="http://ocs.ebd.csic.es/index.php/AET/2015/paper/view/82/281">See article</a></p>
         </div>
-        <div flex="100" flex-gt-xs="50" layout="column">
+        <md-divider md-inset style="margin-left:0px;"></md-divider>
+        <div flex="100" flex-gt-xs="45" layout="column" class="md-padding">
           <h3>Master GIS</h3>
-          <h4>Esri</h4>
-          <strong>Master's Project:</strong>
-          <md-list>
-            <md-list-item >
-              <span>A+</span>
-            </md-list-item>
-             <md-list-item>
-              <span><a href="https://www.youtube.com/embed/Hzyg60Gfl-M">GeoShare</a>, Web app to share your routes</span>
-            </md-list-item>
-          </md-list>
+          <h4>Esri | 2016</h4>
+          <strong>Master's Project (A+)</strong>
+            <p><a href="https://www.youtube.com/embed/Hzyg60Gfl-M">GeoShare</a>, Web app to share your routes</p>
         </div>
       </div>
     </div>
