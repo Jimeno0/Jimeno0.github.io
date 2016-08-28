@@ -40,6 +40,26 @@
       margin:0;
 
     }
+
+
+
+    .ng-enter,
+    .ng-leave {
+      -webkit-transition:0.5s linear all;
+      transition:0.5s linear all;
+    }
+
+    .ng-enter,
+    .ng-leave.ng-leave-active {
+      opacity:0;
+    }
+    .ng-leave,
+    .ng-enter.ng-enter-active {
+      opacity:1;
+    }
+
+
+
     @media (min-width: 480px) {
       #aboutParag{
         font-weight: 500;
@@ -81,10 +101,11 @@
 
     <!-- <div id="about" style="background-image: url(svg/caraperfil.svg);margin:-20px;background-repeat:'no';"> -->
     <div id="about" style="position:relative">
-      <img src="svg/perfil-apaisado.svg" style="width:100%;">
+      <img src="svg/perfil-apaisado-pastel.svg" style="width:100%;">
       <div >
         <p flex="100" flex-gt-sm="55" id="aboutParag">
-            GIS Developer and maps lover. Focused in web development. In my freetime I love to learn new technologies and create WebApps proyects on my <a href="https://github.com/jimeno0">github</a> account. I also like to do any boardsport every now and then.
+          Web & GIS developer. Maps lover. In my freetime I love to learn new technologies and create WebApps proyects on my <a href="https://github.com/jimeno0">github</a> account. I also like to do any boardsport every now and then.
+  
         </p>
       </div>
     </div>
