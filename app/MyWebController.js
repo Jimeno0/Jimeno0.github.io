@@ -14,9 +14,6 @@ angular
     ];
 
 
-
-
-    self.toggleSidenav = toggleSidenav;
     self.toggleMap = toggleMap;
 
     
@@ -32,11 +29,6 @@ angular
           self.portfolio = response.data;
           
     });
-
-    function toggleSidenav(){
-      $mdSidenav('right').toggle();
-    }
-
 
     function toggleMap(){
       var img = angular.element(document.getElementById('imgProfExp'));

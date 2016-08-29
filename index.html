@@ -75,17 +75,24 @@
       
       <md-button hide show-gt-sm ng-repeat="section in MyWC.sections" href="{{section.href}}" >{{section.name}}</md-button>
       <div flex hide-gt-sm></div>
-        <md-button hide-gt-sm ng-click="MyWC.toggleSidenav()">
-          <md-icon md-svg-icon="menu" aria-label="Show sections menu" ></md-icon>
-        </md-button>  
-      
+      <md-menu hide-gt-sm md-position-mode="target-right target" >
+        <md-button aria-label="Open menu" class="md-icon-button" ng-click="$mdOpenMenu($event)">
+          <md-icon md-menu-origin md-svg-icon="menu"></md-icon>
+        </md-button>
+        <md-menu-content width="4" >
+          <md-menu-item ng-repeat="section in MyWC.sections">
+            <md-button href="{{section.href}}" ng-click="ctrl.announceClick($index)">
+                <div layout="row" flex>
+                  <p flex>{{section.name}}</p>
+                </div>
+            </md-button>
+          </md-menu-item>
+        </md-menu-content>
+      </md-menu>
     </div>
   </md-toolbar> 
-  <md-content >
-    <md-sidenav layout="column" md-component-id="right" class="md-sidenav-right md-whiteframe-4dp">
-      <md-button style="text-align:right;" ng-repeat="section in MyWC.sections" href="{{section.href}}" ng-click="MyWC.toggleSidenav()" >{{section.name}}</md-button>
-    </md-sidenav>
 
+  <md-content >
     <!-- <div id="about" style="background-image: url(svg/caraperfil.svg);margin:-20px;background-repeat:'no';"> -->
     <div id="about" style="position:relative">
       <img src="svg/perfil-apaisado-pastel.svg" style="width:100%;">
