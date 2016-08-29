@@ -1,7 +1,11 @@
 <!DOCTYPE html>
 <html>
 <head>
-  <title>jimeno0 website</title>
+  <title>Carlos Pérez Jimeno</title>
+  <meta charset="UTF-8">
+  <meta name="description" content="Personal webside of Carlos Pérez Jimeno">
+  <meta name="keywords" content="web, webside, cv, curriculum, Carlos Pérez Jimeno, jimeno0">
+  <meta name="author" content="Carlos Pérez Jimeno">
   <meta name="viewport" content="width=device-width, user-scalable=no, initial-scale=1.0, maximum-scale=1.0, minimal-ui" />
 
   <link rel="stylesheet" type="text/css" href="bower_components/angular-material/angular-material.css">
@@ -41,25 +45,6 @@
 
     }
 
-
-
-    .ng-enter,
-    .ng-leave {
-      -webkit-transition:0.5s linear all;
-      transition:0.5s linear all;
-    }
-
-    .ng-enter,
-    .ng-leave.ng-leave-active {
-      opacity:0;
-    }
-    .ng-leave,
-    .ng-enter.ng-enter-active {
-      opacity:1;
-    }
-
-
-
     @media (min-width: 480px) {
       #aboutParag{
         font-weight: 500;
@@ -79,19 +64,21 @@
       }
     }
 
-
   </style>
 
 </head>
 <body ng-app="MyApp" ng-controller="MyWebController as MyWC" ng-cloak>
   <md-toolbar class="md-whiteframe-6dp" layout="row" >
     
-    <div class="md-toolbar-tools" >
+    <div class="md-toolbar-tools">
       <h1>Carlos Pérez Jimeno</h1>
+      
       <md-button hide show-gt-sm ng-repeat="section in MyWC.sections" href="{{section.href}}" >{{section.name}}</md-button>
-      <md-button hide-gt-sm ng-click="MyWC.toggleSidenav()">
-        <md-icon md-svg-icon="menu" aria-label="Show sections menu" ></md-icon>
-      </md-button>  
+      <div flex hide-gt-sm></div>
+        <md-button hide-gt-sm ng-click="MyWC.toggleSidenav()">
+          <md-icon md-svg-icon="menu" aria-label="Show sections menu" ></md-icon>
+        </md-button>  
+      
     </div>
   </md-toolbar> 
   <md-content >
@@ -113,30 +100,30 @@
     <div class="md-whiteframe-6dp" id="portfolio" class="md-padding" >
       <h2 class="md-padding">Portfolio</h2>
 
-      <div layout="row" class="md-padding" layout-wrap layout-align="center">
-        <md-card flex="100" flex-gt-xs="45" ng-repeat="app in MyWC.portfolio">
-          <md-card-header>
-            <md-card-header-text>
-              <span class="md-title">{{app.title}}</span>
-              <span class="md-subhead">{{app.subtitle}}</span>
-            </md-card-header-text>
-          </md-card-header>
-          <img ng-src="{{app.image}}" class="md-card-image" alt="{{app.title}}">
-          <md-card-content>
-            <p>
-             {{app.resume}}
-            </p>
-          </md-card-content>
-          <md-card-actions layout="row" layout-align="start center">
-            <md-button class="md-accent" href="{{app.href}}">{{app.hrefText}}</md-button>
-            <md-button class="md-icon-button md-accent" href="{{app.github}}" aria-label="icon">
-                <md-icon md-svg-icon="{{MyWC.icons[0].url}}"></md-icon>
-                <md-tooltip md-visible="true" md-direction="right" md-autohide="true">
-                  View source code
-                </md-tooltip>
-              </md-button>
-          </md-card-actions>
-        </md-card>
+      <div layout="row" class="md-padding" layout-wrap layout-align="center" >
+          <md-card flex="100" flex-gt-xs="45" ng-repeat="app in MyWC.portfolio">
+            <md-card-header>
+              <md-card-header-text>
+                <span class="md-title">{{app.title}}</span>
+                <span class="md-subhead">{{app.subtitle}}</span>
+              </md-card-header-text>
+            </md-card-header>
+            <img ng-src="{{app.image}}" class="md-card-image" alt="{{app.title}}">
+            <md-card-content>
+              <p>
+               {{app.resume}}
+              </p>
+            </md-card-content>
+            <md-card-actions layout="row" layout-align="start center">
+              <md-button class="md-accent" href="{{app.href}}">{{app.hrefText}}</md-button>
+              <md-button class="md-icon-button md-accent" href="{{app.github}}" aria-label="icon">
+                  <md-icon md-svg-icon="{{MyWC.icons[0].url}}"></md-icon>
+                  <md-tooltip md-visible="true" md-direction="right" md-autohide="true">
+                    View source code
+                  </md-tooltip>
+                </md-button>
+            </md-card-actions>
+          </md-card>
       </div>
     </div>
 
@@ -198,15 +185,22 @@
   </md-content>
 
 
+<script type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.1.0/jquery.js"></script>
+
+<!-- ANGULAR MATERIAL LIBS -->
 <script type="text/javascript" src="bower_components/angular/angular.js" ></script>
 <script type="text/javascript" src="bower_components/angular-animate/angular-animate.js" ></script>
 <script type="text/javascript" src="bower_components/angular-aria/angular-aria.js" ></script>
 <script type="text/javascript" src="bower_components/angular-material/angular-material.js" ></script>
 
 
-
+<!-- MY ANGULAR APP-->
 <script type="text/javascript" src="app/MyApp.js" ></script>
 <script type="text/javascript" src="app/MyWebController.js" ></script>
 <script type="text/javascript" src="app/MyWebConfig.js" ></script>
+
+
+
+
 </body>
 </html>

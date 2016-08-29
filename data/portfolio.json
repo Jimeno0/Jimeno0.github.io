@@ -1,5 +1,6 @@
 [
-	{
+	{	
+		"id":"app0",
 		"title": "Crime in Washington D.C.",
 		"subtitle":"Analysing data with graphics",
 		"image":"images/crime-dc.png",
@@ -8,7 +9,8 @@
 		"github":"https://github.com/Jimeno0/my-calcite/tree/gh-pages",
 		"hrefText": "Open app"
 	},
-	{
+	{	
+		"id":"app1",
 		"title": "Employment website",
 		"subtitle":"www.geodevelopers.org/jobs",
 		"image":"images/geodev-jobs.png",
@@ -18,6 +20,7 @@
 		"hrefText": "Open app"
 	},
 	{
+		"id":"app2",
 		"title": "GeoShare",
 		"subtitle":"Master's project",
 		"image":"images/pfm.png",
@@ -27,6 +30,7 @@
 		"hrefText": "Video"
 	},
 	{
+		"id":"app3",
 		"title": "Configurable query widget",
 		"subtitle":"Developed for ArcGIS Web AppBuilder",
 		"image":"images/widget-cities.png",
