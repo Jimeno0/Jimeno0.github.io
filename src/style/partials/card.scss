@@ -1,0 +1,40 @@
+section.projects article{
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  margin: 2rem 1rem;
+  box-sizing: border-box;
+  margin-bottom: 2rem;
+  background-color: white;
+
+  h4 {
+    margin-top: 1em;
+    margin-bottom: 0em;
+  }
+  img {
+    width: 100%;
+    &.icon {
+      width: 3rem;
+    }
+  }
+  p {
+    margin: 1em;
+    &.technologies{
+      opacity: 0.5;
+    }
+  }
+  a {
+    margin: 1em;
+  }
+  span::after {
+    content: " · ";
+    color: $brand-color;
+  }
+  span:last-child::after {
+    content: "";
+  }
+}
+
+svg {
+  color:black;
+}

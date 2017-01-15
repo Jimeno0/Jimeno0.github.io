@@ -1,0 +1,50 @@
+section.home {
+  height: 100vh;
+  justify-content: space-between;
+  & > div {
+    height: 70vh;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: space-around;
+  }
+  h1{
+    text-align: center;
+  }
+
+  a {
+    font-size: $h1-size;
+  }
+  img.logo {
+    width: 12rem;
+  }
+  img.down-row {
+    width: 2rem;
+  }
+  button {
+    font-size: $h2-size;
+    border: none;
+    border-bottom: 2px solid $brand-color;
+    background-color: transparent;
+    padding: 0.6rem 1.7rem;
+    font-weight: 100;
+  }
+  svg polyline {
+    stroke-width: .3rem;
+    stroke: black;
+    animation-name: greenBlack;
+    animation-duration: 3s;
+    animation-iteration-count: infinite;
+  }
+  @keyframes greenBlack {
+    0% {stroke: $brand-color;}
+    50% {stroke: $gray-color;}
+    100% {stroke: $brand-color;}
+  }
+}
+
+@media (min-width:700px) {
+  svg {
+    visibility: hidden;
+  }
+}

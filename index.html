@@ -1,153 +1,25 @@
 <!DOCTYPE html>
-<html>
+<html lang="en">
 <head>
-  <title>Carlos Pérez Jimeno</title>
   <meta charset="UTF-8">
-  <meta name="description" content="Personal website of Carlos Pérez Jimeno">
-  <meta name="keywords" content="web, website, cv, curriculum, Carlos Pérez Jimeno, jimeno0">
-  <meta name="author" content="Carlos Pérez Jimeno">
-  <meta name="viewport" content="width=device-width, user-scalable=no, initial-scale=1.0, maximum-scale=1.0, minimal-ui" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta http-equiv="X-UA-Compatible" content="ie=edge">
+  <meta name="description" content="Jimeno0 website. JS passionate developer and react fanboy">
+  <title>Jimeno0, full stack developer</title>
 
-  <link rel="stylesheet" type="text/css" href="bower_components/angular-material/angular-material.css">
-  <link type="text/css" rel="stylesheet" href="stylesheet.css"></link>
+  <meta name="twitter:card" value="Jimeno0 website. JS passionate developer and react fanboy">
 
+  <meta property="og:title" content="Jimeno0, full stack developer" />
+  <meta property="og:type" content="website" />
+  <meta property="og:url" content=" http://jimeno0.com" />
+  <meta property="og:image" content="src/images/jimeno0_logo.svg" />
+  <meta property="og:description" content="Jimeno0 website. JS passionate developer and react fanboy" />
+
+  <link rel="icon" type="image/png" href="src/images/jimeno0_logo.png">
+  <link rel="stylesheet" type="text/css" href="src/style/normalize.css" />
 </head>
-<body ng-app="MyApp" ng-controller="MyWebController as MyWC" ng-cloak>
-  <md-toolbar class="md-whiteframe-6dp" layout="row" >
-    
-    <div class="md-toolbar-tools">
-      <h1>Carlos Pérez Jimeno</h1>
-      
-      <md-button hide show-gt-sm ng-repeat="section in MyWC.sections" href="{{section.href}}" >{{section.name}}</md-button>
-      <div flex hide-gt-sm></div>
-      <md-menu hide-gt-sm md-position-mode="target-right target" >
-        <md-button aria-label="Open menu" class="md-icon-button" ng-click="$mdOpenMenu($event)">
-          <md-icon md-menu-origin md-svg-icon="menu"></md-icon>
-        </md-button>
-        <md-menu-content width="4" >
-          <md-menu-item ng-repeat="section in MyWC.sections">
-            <md-button href="{{section.href}}" ng-click="ctrl.announceClick($index)">
-                <div layout="row" flex>
-                  <p flex>{{section.name}}</p>
-                </div>
-            </md-button>
-          </md-menu-item>
-        </md-menu-content>
-      </md-menu>
-    </div>
-  </md-toolbar> 
-
-  <md-content >
-    <!-- <div id="about" style="background-image: url(svg/caraperfil.svg);margin:-20px;background-repeat:'no';"> -->
-    <div id="about" style="position:relative">
-      <img src="svg/perfil-apaisado-pastel.svg" style="width:100%;">
-      <div >
-        <p flex="100" flex-gt-sm="55" id="aboutParag">
-          Web & GIS developer. Maps lover. In my freetime I love to learn new technologies and create WebApps projects on my <a href="https://github.com/jimeno0">github</a> account. I also like to do any boardsport every now and then.
-  
-        </p>
-      </div>
-    </div>
-    
-    <div class="md-whiteframe-6dp" id="portfolio" class="md-padding" >
-      <h2 class="md-padding">Portfolio</h2>
-
-      <div layout="row" class="md-padding" layout-wrap layout-align="center" >
-          <md-card flex="100" flex-gt-xs="45" ng-repeat="app in MyWC.portfolio">
-            <md-card-header>
-              <md-card-header-text>
-                <span class="md-title">{{app.title}}</span>
-                <span class="md-subhead">{{app.subtitle}}</span>
-              </md-card-header-text>
-            </md-card-header>
-            <img ng-src="{{app.image}}" class="md-card-image" alt="{{app.title}}">
-            <md-card-content>
-              <p>
-               {{app.resume}}
-              </p>
-            </md-card-content>
-            <md-card-actions layout="row" layout-align="start center">
-              <md-button class="md-accent" href="{{app.href}}">{{app.hrefText}}</md-button>
-              <md-button class="md-icon-button md-accent" href="{{app.github}}" aria-label="icon">
-                  <md-icon md-svg-icon="{{MyWC.icons[0].url}}"></md-icon>
-                  <md-tooltip md-visible="true" md-direction="right" md-autohide="true">
-                    View source code
-                  </md-tooltip>
-                </md-button>
-            </md-card-actions>
-          </md-card>
-      </div>
-    </div>
-
-    <div id="profExp" style="position:relative">
-      <h2>Professional experience</h2> 
-      <div id="imgProfExp" >
-        <img ng-src="images/profexp-plus600.png" class="md-card-image" alt="professional experience" style="width:100%; cursor: pointer;" ng-click="MyWC.toggleMap()" id="imgProfExp" hide show-gt-xs>
-
-        <img ng-src="images/profexp-less600.png" class="md-card-image" alt="professional experience" style="width:100%; cursor: pointer;" ng-click="MyWC.toggleMap()" id="imgProfExp" hide-gt-xs>  
-      </div>
-      <div id="iframeProfExp" hide>
-        <md-button class="md-raised md-warn exit-navigation-btn" ng-click="MyWC.toggleMap()" >Exit navigation</md-button>
-        <iframe class="prof-exp-iframe" src="https://www.maps.arcgis.com/apps/MapTour/index.html?appid=3fbbae1e85d34431bee017870e2aa57a&embed" id="iframeProfExp"></iframe>  
-      </div> 
-    </div>
-
-    <div class="md-whiteframe-6dp" id="skills">  
-      <h2 class="md-padding">Skills</h2>
-      <md-tabs md-dynamic-height md-border-bottom>
-        <md-tab ng-repeat="cat in MyWC.cats" label="{{cat.category}}">
-          <md-content class="md-padding">
-
-            <div layout="row" layout-wrap>
-              <div class="md-padding" ng-repeat="item in cat.skills" flex="100" flex-gt-xs="50">
-                <p>{{item.name}}</p>
-                <md-progress-linear md-mode="determinate" value="{{item.knowledge}}"></md-progress-linear>
-                <md-tooltip>{{item.knowledge}}%</md-tooltip>
-              </div>
-            </div>
-          </md-content>
-        </md-tab>
-      </md-tabs>
-    </div>
-
-    <div id="education"  class="md-padding">
-      <h2>Education</h2> 
-      <div layout="row" layout-wrap layout-align="space-between" >
-        <div flex="100" flex-gt-xs="45" layout="column" class="md-padding" style="text-align:right;">
-          <h3>Survey engineer</h3>
-          <h4>Universidad Politecnica de Madrid | 2014</h4>
-          <strong>Degree's Project (9/10)</strong>
-            <p>Utilización de recursos Open Data en procesos de documentación cartográfica de bajo coste sobre territorios no estructurados de interés arqueológico mediante imágenes Landsat 8: Área de Mleiha-Khor Fakkan (E.A.U). <a href="http://ocs.ebd.csic.es/index.php/AET/2015/paper/view/82/281">See article</a></p>
-        </div>
-        <md-divider md-inset style="margin-left:0px;"></md-divider>
-        <div flex="100" flex-gt-xs="45" layout="column" class="md-padding">
-          <h3>Master GIS</h3>
-          <h4>Esri | 2016</h4>
-          <strong>Master's Project (A+)</strong>
-            <p><a href="https://www.youtube.com/embed/Hzyg60Gfl-M">GeoShare</a>, Web app to share your routes</p>
-        </div>
-      </div>
-    </div>
-
-    <div class="md-whiteframe-6dp md-padding" id="contact" layout-align="space-between" layout="row">
-      <md-button ng-repeat="icon in MyWC.icons" class="md-fab" href="{{icon.href}}" aria-label="{{icon.name}}">
-        <md-icon md-svg-icon="{{icon.url}}" ></md-icon>
-      </md-button>
-    </div>
-  </md-content>
-
-<script type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.1.0/jquery.js"></script>
-
-<!-- ANGULAR MATERIAL LIBS -->
-<script type="text/javascript" src="bower_components/angular/angular.js" ></script>
-<script type="text/javascript" src="bower_components/angular-animate/angular-animate.js" ></script>
-<script type="text/javascript" src="bower_components/angular-aria/angular-aria.js" ></script>
-<script type="text/javascript" src="bower_components/angular-material/angular-material.js" ></script>
-
-<!-- MY ANGULAR APP-->
-<script type="text/javascript" src="app/MyApp.js" ></script>
-<script type="text/javascript" src="app/MyWebController.js" ></script>
-<script type="text/javascript" src="app/MyWebConfig.js" ></script>
-
+<body>
+  <div id="app"></div>
+  <script src="bundle.js" charset="utf-8"></script>
 </body>
 </html>

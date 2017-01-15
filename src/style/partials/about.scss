@@ -1,0 +1,20 @@
+section.about{
+  min-height: 100vh;
+  background-color: $brand-color;
+  color: white;
+  justify-content: center;
+  img {
+    margin: 0 0 4em;
+  }
+  h2{
+    font-size: $h1-size;
+  }
+  div {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+  }
+  a {
+    color: $secondary-color;
+  }
+}
