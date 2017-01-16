@@ -22027,7 +22027,7 @@
 	      _react2.default.createElement(
 	        "p",
 	        null,
-	        "Im a full stack developer and new techs lover. Self-taught addicted."
+	        "I'm a full stack developer and new techs lover. Self-taught addicted."
 	      ),
 	      _react2.default.createElement(
 	        "p",
@@ -22375,7 +22375,7 @@
 	    _react2.default.createElement(
 	      'p',
 	      null,
-	      'Designed with \u2665\uFE0F by ',
+	      'Designed with \uD83C\uDF7A by ',
 	      _react2.default.createElement(
 	        'a',
 	        { href: 'https://twitter.com/jimeno0' },

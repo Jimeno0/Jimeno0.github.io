@@ -6,7 +6,7 @@ const About = () =>
     <div>
       <h2>WHO?</h2>
       <p>My name is Carlos P. Jimeno AKA <a href="https://twitter.com/jimeno0">Jimeno0</a></p>
-      <p>Im a full stack developer and new techs lover. Self-taught addicted.</p>
+      <p>I'm a full stack developer and new techs lover. Self-taught addicted.</p>
       <p>
         Currently working at <a href="https://influencity.com/es/"> Influencity </a>
         and a <a href="https://facebook.github.io/react/">React</a> fanboy.
