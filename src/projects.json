@@ -11,7 +11,7 @@
   {
     "id": 1,
     "name": "GEODEVELOPERS JOB SITE",
-    "image": "src/images/gis-jobs-capture.png",
+    "image": "src/images/gis-jobs-capture.jpg",
     "description": "Employment website for the Geodevelopers community",
     "technologies": ["ArcGIS API", "jQuery", "Bootstrap"],
     "github": "https://github.com/Geo-Developers/geo-developers-site/tree/jobs_site",

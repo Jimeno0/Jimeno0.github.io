@@ -22375,7 +22375,7 @@
 	    _react2.default.createElement(
 	      'p',
 	      null,
-	      'Designed with \uD83C\uDF7A by ',
+	      'Designed with \uD83D\uDC89 by ',
 	      _react2.default.createElement(
 	        'a',
 	        { href: 'https://twitter.com/jimeno0' },
